@@ -1,0 +1,298 @@
+@charset "utf-8";
+
+html,
+body {
+    background-color: #000;
+}
+
+/* header *************************************************************/
+header {
+    position: fixed;
+    z-index: 9999;
+    left: 50%;
+    top: 50px;
+    transform: translateX(-50%);
+}
+
+header .tabMenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+}
+
+header .tabMenu a {
+    display: inline-block;
+    font-family: 'D2Coding';
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 35px;
+    border-radius: 50px;
+    padding: 10px 22px;
+    box-sizing: border-box;
+    color: #000;
+}
+
+header .tabMenu a.on,
+header .tabMenu a:hover {
+    color: #fff;
+    background-color: #000;
+}
+
+
+/* section#intro *************************************************************/
+section#intro {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../img/vector-line.svg) no-repeat center 35%;
+}
+
+section#intro .txtBox {
+    text-align: center;
+}
+
+section#intro .txtBox h1 {
+    margin-bottom: 40px;
+}
+
+section#intro .txtBox p {
+    font-family: 'D2Coding';
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 140%;
+}
+
+section#intro .contact {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    font-size: 26px;
+}
+
+section#intro .contact .tel {
+    line-height: 160%;
+}
+
+section#intro .contact .eMail {
+    line-height: 160%;
+}
+
+
+
+/* section#about *************************************************************/
+section#about {}
+
+/* .aboutMe */
+#about .aboutMe {
+    padding: 0 150px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#about .aboutMe .txtBox {}
+
+#about .aboutMe .txtBox h1 {}
+
+#about .aboutMe .txtBox p {}
+
+#about .aboutMe .txtBox .linkBtn {}
+
+#about .aboutMe .imgBox {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    gap: 50px;
+}
+
+#about .aboutMe .imgBox img {
+    display: block;
+    width: 100%;
+}
+
+/* .coreSkills */
+#about .coreSkills {
+    padding: 0 100px;
+    box-sizing: border-box;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#about .coreSkills .txtBox {}
+
+#about .coreSkills .txtBox h1 {
+    margin-bottom: 50px;
+}
+
+#about .coreSkills .txtBox p {
+    margin-bottom: 100px;
+}
+
+#about .coreSkills .txtBox .imgBox {
+    width: 100vw;
+    padding: 0 100px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
+    opacity: 0.5;
+}
+
+#about .coreSkills .txtBox .imgBox img {
+    display: block;
+    object-fit: contain;
+    flex: 1;
+    max-width: 120px;
+}
+
+/* .certification */
+#about .certification {
+    padding: 0 150px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#about .certification .txtBox {}
+
+#about .certification .txtBox h1 {}
+
+#about .certification .txtBox p {}
+
+#about .certification .imgBox {
+    width: 700px;
+    height: 100%;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about .certification .imgBox .wrapper {
+    position: relative;
+}
+
+#about .certification .imgBox .wrapper::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background: url(../img/certification.png) no-repeat center / 330px;
+
+    position: absolute;
+    right: -50px;
+    bottom: -50px;
+
+    opacity: 0.3;
+    z-index: 1;
+}
+
+#about .certification .imgBox img {
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: block;
+    width: 330px;
+    position: relative;
+    z-index: 2;
+}
+
+
+
+
+/* section#work *************************************************************/
+section#work {}
+
+section#work .redesign {
+    padding: 0 100px;
+    box-sizing: border-box;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative; /* .redesign::before의 기준 */
+
+}
+
+section#work .redesign::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    opacity: 0.2;
+
+    width: 100%;
+    height: 100%;
+    background: url(../img/salady-logo.svg) no-repeat center / 1000px;
+}
+
+section#work .redesign .txtBox {
+    position: relative;
+    z-index: 2;
+}
+
+section#work .redesign .txtBox h1 {
+    margin-bottom: 50px;
+}
+
+section#work .redesign .txtBox p {
+    margin-bottom: 30px;
+}
+
+section#work .redesign .btnBox {}
+
+section#work .redesign .btnBox .linkBtn {
+    margin-right: 20px;
+}
+
+section#work .redesign .btnBox .linkBtn .txtArea {}
+
+section#work .redesign .btnBox .linkBtn img {}
+
+
+/* article.cloneCoding 임시숨김처리, 1 피그마 제작 + 2 html에 내용 채워넣고 3css 넣어야 함 */
+section#work article.cloneCoding {
+    display: none;
+}
+
+
+/* section#contact *************************************************************/
+section#contact {
+    padding: 0 150px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+section#contact .txtBox {}
+section#contact .txtBox h1 {}
+section#contact .txtBox p {
+    margin-bottom: 0;
+}
+section#contact .imgBox {
+    width: 700px;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section#contact .imgBox img {
+    display: block;
+}

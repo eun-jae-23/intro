@@ -1,0 +1,114 @@
+/* 폰트 사용 방법 */
+
+/* 
+
+1. 리아체 (normal,bold,bold)
+- 폰트 변환하여 사용 (@font-face)
+    font-family: 'RiaSans-Regular';
+    font-weight: normal;
+
+    font-family: 'RiaSans-Bold';
+    font-weight: bold;
+
+    font-family: 'RiaSans-ExtraBold';
+    font-weight: bold;
+
+
+2. 수트 (weight : 100-900)
+- 웹폰트 사용 (link)
+- 링크 :
+<link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/variable/woff2/SUIT-Variable.css"
+        rel="stylesheet">
+-> ExtraLight / Regular / ExtraBold / Heavy
+->    200        400        800        900
+    font-family: 'SUIT Variable', sans-serif;
+    font-weight: 200|400|800|900;
+
+
+3. Classy Vouge (weight : normal)
+- 폰트 변환하여 사용 (@font-face)
+    font-family: 'Classy Vogue';
+    font-weight: normal;
+
+
+4. D2 Coding (weight:regular, bold)
+- 폰트 변환하여 사용 (@font-face)
+    font-family: 'D2Coding';
+    font-weight: normal|bold;
+*/
+
+/* *********************************************************************** */
+
+/* 리아체 폰트변환 */
+
+@font-face {
+    font-family: 'RiaSans-Bold';
+    src: url('RiaSans-BoldA1.eot');
+    src: url('RiaSans-BoldA1.eot?#iefix') format('embedded-opentype'),
+        url('RiaSans-BoldA1.woff2') format('woff2'),
+        url('RiaSans-BoldA1.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'RiaSans-ExtraBold';
+    src: url('RiaSans-ExtraBoldA1.eot');
+    src: url('RiaSans-ExtraBoldA1.eot?#iefix') format('embedded-opentype'),
+        url('RiaSans-ExtraBoldA1.woff2') format('woff2'),
+        url('RiaSans-ExtraBoldA1.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'RiaSans-Regular';
+    src: url('RiaSans-RegularA1.eot');
+    src: url('RiaSans-RegularA1.eot?#iefix') format('embedded-opentype'),
+        url('RiaSans-RegularA1.woff2') format('woff2'),
+        url('RiaSans-RegularA1.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Classy Vouge 폰트변환 */
+
+@font-face {
+    font-family: 'Classy Vogue';
+    src: url('ClassyVogueRegular.eot');
+    src: url('ClassyVogueRegular.eot?#iefix') format('embedded-opentype'),
+        url('ClassyVogueRegular.woff2') format('woff2'),
+        url('ClassyVogueRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* D2 coding 폰트변환 */
+
+@font-face {
+    font-family: 'D2Coding';
+    src: url('D2CodingBold.eot');
+    src: url('D2CodingBold.eot?#iefix') format('embedded-opentype'),
+        url('D2CodingBold.woff2') format('woff2'),
+        url('D2CodingBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'D2Coding';
+    src: url('D2Coding.eot');
+    src: url('D2Coding.eot?#iefix') format('embedded-opentype'),
+        url('D2Coding.woff2') format('woff2'),
+        url('D2Coding.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
