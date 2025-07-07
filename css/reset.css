@@ -158,7 +158,24 @@ caption {
     display: none;
 }
 
-
+/* 버튼태그 초기화 */
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 0;
+}
 
 /* 
 hr {

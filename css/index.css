@@ -5,7 +5,7 @@ body {
     background-color: #000;
 }
 
-/* header *************************************************************/
+
 header {
     position: fixed;
     z-index: 9999;
@@ -13,6 +13,7 @@ header {
     top: 50px;
     transform: translateX(-50%);
 }
+
 
 header .tabMenu {
     display: flex;
@@ -95,13 +96,159 @@ section#about {}
     justify-content: space-between;
 }
 
-#about .aboutMe .txtBox {}
+#about .aboutMe .container {}
 
-#about .aboutMe .txtBox h1 {}
+#about .aboutMe .container h1 {}
 
-#about .aboutMe .txtBox p {}
+#about .aboutMe .container p {}
 
-#about .aboutMe .txtBox .linkBtn {}
+#about .aboutMe .container .linkBtn {}
+
+
+/************** 프로필 팝업창 시작 *********************/
+
+/* 프로필 공통 영역 */
+#about .aboutMe .container .profile h2 {
+    font-family: 'D2Coding';
+    font-weight: normal;
+    font-size: 70px;
+    line-height: 81px;
+}
+#about .aboutMe .container .profile h3 {
+    font-family: 'SUIT Variable', sans-serif;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 62px;
+    margin-bottom: 6px;
+}
+#about .aboutMe .container .profile h4 {
+    font-family: 'D2Coding';
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 52px;
+    margin-bottom: 12px;
+}
+#about .aboutMe .container .profile h5 {
+    font-family: 'SUIT Variable', sans-serif;
+    font-weight: 800;
+    font-size: 22px;
+    line-height: 27px;
+}
+#about .aboutMe .container .profile .content .txtWrap > div {
+    margin-bottom: 50px;
+}
+
+#about .aboutMe .container .profile .content .txtWrap .txtBox1 {
+    display: flex;
+    column-gap: 30px;
+}
+#about .aboutMe .container .profile .content .txtWrap .txtBox2 {}
+#about .aboutMe .container .profile .content .txtWrap .txtBox3 {}
+
+#about .aboutMe .container .profile .content .txtWrap ul li {
+    font-size: 22px;
+    line-height: 27px;
+}
+
+
+
+
+/* 프로필 각각 영역 */
+#about .aboutMe .container .profile {
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10000;
+}
+#about .aboutMe .container .profile .wrapper {
+    width: 100vw;
+    height: 100vh;
+    position: relative; /* .top, .top h2 span, .top button img의 기준 */
+}
+#about .aboutMe .container .profile .wrapper .top {
+    width: 100vw;
+    height: 100vh;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#about .aboutMe .container .profile .wrapper .top h2 {
+    padding: 100px 0 0 100px;
+    box-sizing: border-box;
+}
+#about .aboutMe .container .profile .wrapper .top h2 span {
+    position: absolute;
+    right: 100px;
+    bottom: 100px;
+}
+#about .aboutMe .container .profile .wrapper .top button {
+}
+#about .aboutMe .container .profile .wrapper .top button img {
+    width: 80px;
+    display: block;
+    position: absolute;
+    right: 100px;
+    top: 100px;
+}
+
+
+#about .aboutMe .container .profile .content {
+    width: 100vw;
+    height: 100vh;    
+    box-sizing: border-box;
+    padding: 250px 0 0 100px;
+
+    display: flex;
+    column-gap: 150px;
+}
+#about .aboutMe .container .profile .content .photoWrap {
+    text-align: center;
+}
+#about .aboutMe .container .profile .content .photoWrap .photoBox {
+    width: 338px;
+    height: 448px;
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 32px;
+}
+#about .aboutMe .container .profile .content .photoWrap .photoBox img {
+    width: 125%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+#about .aboutMe .container .profile .content .photoWrap h3 {}
+#about .aboutMe .container .profile .content .photoWrap p {
+    font-size: 30px;
+    line-height: 37px;
+}
+
+
+#about .aboutMe .container .profile .content .txtWrap {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    column-gap: 150px;
+}
+
+.profile .content .txtWrap .education {}
+.profile .content .txtWrap .career {}
+.profile .content .txtWrap .coreSkill {}
+.profile .content .txtWrap .certificate {}
+.profile .content .txtWrap .tool {}
+
+
+
+/************** 프로필 팝업창 끝 *********************/
+
+
+
 
 #about .aboutMe .imgBox {
     display: grid;
@@ -114,8 +261,8 @@ section#about {}
     width: 100%;
 }
 
-/* .coreSkills */
-#about .coreSkills {
+/* article.coreSkills */
+#about article.coreSkills {
     padding: 0 100px;
     box-sizing: border-box;
     text-align: center;
@@ -126,17 +273,17 @@ section#about {}
 
 }
 
-#about .coreSkills .txtBox {}
+#about article.coreSkills .txtBox {}
 
-#about .coreSkills .txtBox h1 {
+#about article.coreSkills .txtBox h1 {
     margin-bottom: 50px;
 }
 
-#about .coreSkills .txtBox p {
+#about article.coreSkills .txtBox p {
     margin-bottom: 100px;
 }
 
-#about .coreSkills .txtBox .imgBox {
+#about article.coreSkills .txtBox .imgBox {
     width: 100vw;
     padding: 0 100px;
     box-sizing: border-box;
@@ -147,7 +294,7 @@ section#about {}
     opacity: 0.5;
 }
 
-#about .coreSkills .txtBox .imgBox img {
+#about article.coreSkills .txtBox .imgBox img {
     display: block;
     object-fit: contain;
     flex: 1;
