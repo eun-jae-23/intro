@@ -98,9 +98,18 @@ section#about {}
 
 #about .aboutMe .container {}
 
-#about .aboutMe .container h1 {}
+#about .aboutMe .container h1 {
+    font-family: 'Classy Vogue';
+    font-weight: normal;
+    font-size: 150px;
+    margin-bottom: 30px;
+}
 
-#about .aboutMe .container p {}
+#about .aboutMe .container p {
+    font-size: 26px;
+    line-height: 160%;
+    margin-bottom: 30px;
+}
 
 #about .aboutMe .container .linkBtn {}
 
