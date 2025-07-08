@@ -252,8 +252,7 @@ function profilePopUp() {
         $('#about .profile').css('display','block');
     });
 
-    $('#about .profile .wrapper .top button').on('click',function(evt){
-        evt.preventDefault();
+    $('#about .profile .wrapper .top button').on('click',function(){
 
         $('#about .profile').css('display','none');
     });
