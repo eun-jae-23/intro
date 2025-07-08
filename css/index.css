@@ -34,6 +34,8 @@ header .tabMenu a {
     padding: 10px 22px;
     box-sizing: border-box;
     color: #000;
+
+    transition: all 0.3s;
 }
 
 header .tabMenu a.on,
@@ -140,24 +142,61 @@ section#about {}
 #about .aboutMe .container .profile h5 {
     font-family: 'SUIT Variable', sans-serif;
     font-weight: 800;
-    font-size: 22px;
-    line-height: 27px;
+    font-size: 20px;
+    line-height: 25px;
 }
 #about .aboutMe .container .profile .content .txtWrap > div {
-    margin-bottom: 50px;
+    margin-bottom: 36px;
 }
-
-#about .aboutMe .container .profile .content .txtWrap .txtBox1 {
+/* .txtWrap ******************************************************/
+#about .aboutMe .container .profile .content .txtWrap .txtBox ul li {
+    font-size: 20px;
+    line-height: 25px;
+}
+/* .txtWrap 공통 영역 : .txtBox.type1, .txtBox.type2, .txtBox.type3 */
+/* .txtBox.type1 : .education, .career */
+#about .aboutMe .container .profile .content .txtWrap .txtBox.type1 {
     display: flex;
     column-gap: 30px;
 }
-#about .aboutMe .container .profile .content .txtWrap .txtBox2 {}
-#about .aboutMe .container .profile .content .txtWrap .txtBox3 {}
-
-#about .aboutMe .container .profile .content .txtWrap ul li {
-    font-size: 22px;
-    line-height: 27px;
+#about .aboutMe .container .profile .content .txtWrap .txtBox.type1 .leftBox {}
+#about .aboutMe .container .profile .content .txtWrap .txtBox.type1 .leftBox ul {}
+#about .aboutMe .container .profile .content .txtWrap .txtBox.type1 .leftBox ul li {
+    margin-bottom: 6px;
 }
+#about .aboutMe .container .profile .content .txtWrap .txtBox.type1 .leftBox ul li .firstTxt {
+    float: left;
+    width: 78px;
+}
+#about .aboutMe .container .profile .content .txtWrap .txtBox.type1 .leftBox ul li .midTxt {
+    float: left;
+    margin: 0 8px;
+}
+
+
+#about .aboutMe .container .profile .content .txtWrap .txtBox.type1 .rightBox {}
+#about .aboutMe .container .profile .content .txtWrap .txtBox.type1 .rightBox ul {}
+#about .aboutMe .container .profile .content .txtWrap .txtBox.type1 .rightBox ul li {
+    margin-bottom: 6px;
+}
+
+
+/* .txtBox2 : .coreSkill, .tool */
+#about .aboutMe .container .profile .content .txtWrap .txtBox.type2 {}
+#about .aboutMe .container .profile .content .txtWrap .txtBox.type2 .box {
+    display: flex;
+    column-gap: 30px;
+}
+#about .aboutMe .container .profile .content .txtWrap .txtBox.type2 .box h5 {}
+#about .aboutMe .container .profile .content .txtWrap .txtBox.type2 .box ul {}
+#about .aboutMe .container .profile .content .txtWrap .txtBox.type2 .box ul li {
+    margin-bottom: 6px;
+}
+
+/* .txtBox3 : .certificate */
+#about .aboutMe .container .profile .content .txtWrap .txtBox.type3 {}
+
+
 
 
 
@@ -172,7 +211,7 @@ section#about {}
     top: 0;
     z-index: 10000;
 
-    display: none;
+    display: none; /* js로 display 조절 */
 }
 #about .aboutMe .container .profile .wrapper {
     width: 100vw;
@@ -188,22 +227,23 @@ section#about {}
     top: 0;
 }
 #about .aboutMe .container .profile .wrapper .top h2 {
-    padding: 100px 0 0 100px;
+    padding: 60px 0 0 100px;
     box-sizing: border-box;
 }
 #about .aboutMe .container .profile .wrapper .top h2 span {
     position: absolute;
     right: 100px;
-    bottom: 100px;
+    bottom: 60px;
 }
 #about .aboutMe .container .profile .wrapper .top button {
-}
-#about .aboutMe .container .profile .wrapper .top button img {
     width: 80px;
-    display: block;
     position: absolute;
     right: 100px;
     top: 100px;
+}
+#about .aboutMe .container .profile .wrapper .top button img {
+    width: 100%;
+    display: block;
 }
 
 
@@ -211,7 +251,7 @@ section#about {}
     width: 100vw;
     height: 100vh;    
     box-sizing: border-box;
-    padding: 250px 0 0 100px;
+    padding: 180px 0 0 100px;
 
     display: flex;
     column-gap: 150px;
@@ -222,17 +262,10 @@ section#about {}
 #about .aboutMe .container .profile .content .photoWrap .photoBox {
     width: 338px;
     height: 448px;
-    border-radius: 30px;
-    overflow: hidden;
-    position: relative;
     margin-bottom: 32px;
 }
 #about .aboutMe .container .profile .content .photoWrap .photoBox img {
-    width: 125%;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
+    width: 100%;
 }
 #about .aboutMe .container .profile .content .photoWrap h3 {}
 #about .aboutMe .container .profile .content .photoWrap p {
@@ -246,6 +279,7 @@ section#about {}
     flex-direction: column;
     flex-wrap: wrap;
     column-gap: 150px;
+    height: calc(100vh - 240px);
 }
 
 .profile .content .txtWrap .education {}
@@ -253,6 +287,21 @@ section#about {}
 .profile .content .txtWrap .coreSkill {}
 .profile .content .txtWrap .certificate {}
 .profile .content .txtWrap .tool {}
+/* .tool만 .box margin-bottom 추가 */
+.profile .content .txtWrap .tool .box {
+    margin-bottom: 24px;
+}
+/* .tool img위한 li, img 설정 */
+.profile .content .txtWrap .tool .box ul {
+    display: grid;
+    grid-template-columns: 40px 40px 40px 40px;
+    gap: 12px 16px;
+}
+.profile .content .txtWrap .tool .box ul li {}
+.profile .content .txtWrap .tool .box ul li img {
+    display: block;
+    width: 100%;
+}
 
 
 
