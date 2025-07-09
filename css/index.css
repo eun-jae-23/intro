@@ -195,6 +195,16 @@ section#about {}
 
 /* .txtBox3 : .certificate */
 #about .aboutMe .container .profile .content .txtWrap .txtBox.type3 {}
+#about .aboutMe .container .profile .content .txtWrap .txtBox.type3 ul {}
+#about .aboutMe .container .profile .content .txtWrap .txtBox.type3 ul li {
+    margin-bottom: 6px;
+}
+#about .aboutMe .container .profile .content .txtWrap .txtBox.type3 ul li span {
+    display: block;
+    width: 104px;
+    float: left;
+    margin-right: 30px;
+}
 
 
 
